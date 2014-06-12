@@ -1,70 +1,128 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <title>Bootstrap Listr by idleberg</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <title>Bootstrap Listr by idleberg</title>
   </head>
-
   <body>
-    <div id="container">
-      <div class="inner">
+    <div class="wrapper">
+      <header>
+        <h1>Bootstrap Listr</h1>
+        <p>pretty folder views</p>
 
-        <header>
-          <h1>Bootstrap Listr</h1>
-          <h2>pretty folder views</h2>
-        </header>
+        <p class="view"><a href="https://github.com/idleberg/Bootstrap-Listr">View the Project on GitHub <small>idleberg/Bootstrap-Listr</small></a></p>
 
-        <section id="downloads" class="clearfix">
-          <a href="https://github.com/idleberg/Bootstrap-Listr/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
-          <a href="https://github.com/idleberg/Bootstrap-Listr/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
-          <a href="https://github.com/idleberg/Bootstrap-Listr" id="view-on-github" class="button"><span>View on GitHub</span></a>
-        </section>
 
-        <hr>
+        <ul>
+          <li><a href="https://github.com/idleberg/Bootstrap-Listr/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/idleberg/Bootstrap-Listr/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/idleberg/Bootstrap-Listr">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a name="bootstrap-listr" class="anchor" href="#bootstrap-listr"><span class="octicon octicon-link"></span></a>Bootstrap Listr</h1>
 
-        <section id="main_content">
-          <h1>
-<a name="description" class="anchor" href="#description"><span class="octicon octicon-link"></span></a>Description</h1>
-
-<p>A simple PHP script to display folders and files on a server in a well form list, based on the style-sheets provided by <a href="http://getbootstrap.com">Bootstrap 3</a>.</p>
+<p>A simple PHP script to display folders and files on a server in a well formed list, making use of the <a href="http://getbootstrap.com">Bootstrap 3.1</a> framework.</p>
 
 <p><img src="https://raw.github.com/idleberg/Bootstrap-Listr/gh-pages/images/screenshot-font_awesome.png" alt="Screenshot"><br><em>Screenshot: Example with <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a> icons enabled</em></p>
 
 <p>For examples using different configurations, have a look at the <a href="http://demo.idleberg.com/Bootstrap-Listr">live demos</a>!</p>
 
-<h1>
-<a name="credits" class="anchor" href="#credits"><span class="octicon octicon-link"></span></a>Credits</h1>
+<h2>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<h3>
+<a name="github" class="anchor" href="#github"><span class="octicon octicon-link"></span></a>GitHub</h3>
+
+<p>Clone this repository using <code>git clone https://github.com/idleberg/Bootstrap-Listr</code> or <a href="https://raw.github.com/idleberg/Bootstrap-Listr/master/index.php"><code>download</code></a> the raw file.</p>
+
+<h3>
+<a name="robotstxt" class="anchor" href="#robotstxt"><span class="octicon octicon-link"></span></a>robots.txt</h3>
+
+<p>The basic file you're after is <code>index.php</code>, but the repository also comes with a restrictive <code>robots.txt</code> file. Should you wish your page to be indexed by web crawlers et al, you can delete the file or adjust its <a href="http://www.robotstxt.org/robotstxt.html">settings</a>.</p>
+
+<p>Also note that by default, <code>index.php</code> has <code>robots.txt</code> on its ignore-list, meaning the file will be hidden in the view.</p>
+
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>I am unaware of a method to use one index file for several directories at once (feel free to correct me!), hence you will have to copy the index in every directory where you would like to use it. Since Bootstrap Listr is a one-file solution, doing so is relatively easy.</p>
+
+<h3>
+<a name="options" class="anchor" href="#options"><span class="octicon octicon-link"></span></a>Options</h3>
+
+<p>You can configure a number of settings in the header of the script file:</p>
+
+<ul>
+<li>Optional columns for size, modified date, permissions</li>
+<li>Document icons</li>
+<li>Column sorting</li>
+<li>Responsive tables</li>
+<li>List of ignored files</li>
+<li>Default location for JavaScript libraries and style sheets</li>
+<li>Google Analytics</li>
+</ul><h3>
+<a name="naming" class="anchor" href="#naming"><span class="octicon octicon-link"></span></a>Naming</h3>
+
+<p>If you prefer a different file name for the script, you can rename it without worrying about the ignore list. However, depending on your server, you might have declare the renamed file as your directory index.</p>
+
+<ul>
+<li>Apache: <code>DirectoryIndex myIndex.php</code> (see <a href="http://httpd.apache.org/docs/2.2/mod/mod_dir.html">documentation</a>)</li>
+<li>lighttpd: <code>index-file.names = ( "/myIndex.php" )</code> (see <a href="http://redmine.lighttpd.net/projects/1/wiki/Docs_ModDirlisting">documentation</a>)</li>
+<li>nginx: <code>index myIndex.php</code> (see <a href="http://nginx.org/en/docs/http/ngx_http_index_module.html">documentation</a>)</li>
+</ul><h3>
+<a name="font-awesome" class="anchor" href="#font-awesome"><span class="octicon octicon-link"></span></a>Font Awesome</h3>
+
+<p>Rather than using generic icons, you can enable <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a> for beautiful, file-specific icons. Note that this will require extra resources, hence increase the load time.</p>
+
+<h3>
+<a name="theming" class="anchor" href="#theming"><span class="octicon octicon-link"></span></a>Theming</h3>
+
+<p>Should you decide to use <a href="http://bootswatch.com/">Bootswatch</a> (or any other) themes, please note that some of these do not include the <a href="http://getbootstrap.com/components/#glyphicons">glyphicons</a> used in the script. You can disable glyphicons in the script header or use Font Awesome icons instead.</p>
+
+<h3>
+<a name="libraries--style-sheets" class="anchor" href="#libraries--style-sheets"><span class="octicon octicon-link"></span></a>Libraries &amp; Style-sheets</h3>
+
+<p>For your convenience, we use CDNs for Bootstrap and JQuery. Should you have reasons against this, you can change the default locations in the script header.</p>
+
+<h2>
+<a name="credits" class="anchor" href="#credits"><span class="octicon octicon-link"></span></a>Credits</h2>
 
 <p>This project is built upon—or includes—code from the following people:</p>
 
 <ul>
-<li>Greg Johnson - <a href="http://greg-j.com/phpdl/">PHP Directory Lister</a>
-</li>
+<li>Greg Johnson - <a href="http://web.archive.org/web/20130920165711/http://greg-j.com/phpdl/">PHPDL lite</a> [Internet Archive]</li>
 <li>Na Wong - <a href="http://nadesign.net/listr/">Listr</a>
 </li>
 <li>Joe McCullough - <a href="http://joequery.github.io/Stupid-Table-Plugin/">Stupid Table Plugin</a>
 </li>
-</ul><h1>
-<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h1>
+</ul><h2>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
 
-<p>This work by Jan T. Sott is licensed under a <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons License</a></p>
-        </section>
+<p>This work by Jan T. Sott is licensed under a <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 Unported License</a></p>
 
-        <footer>
-          Bootstrap Listr is maintained by <a href="https://github.com/idleberg">idleberg</a><br>
-          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
-        </footer>
+<p><strong>Note:</strong> I am aware that Creative Commons <a href="http://wiki.creativecommons.org/FAQ#Can_I_apply_a_Creative_Commons_license_to_software.3F">advises</a> against using their licenses for software. The choice hasn't been mine and I hope to resolve this issue in the future.</p>
 
-        
-      </div>
+<h2>
+<a name="donate" class="anchor" href="#donate"><span class="octicon octicon-link"></span></a>Donate</h2>
+
+<p>You are welcome support this project using <a href="https://flattr.com/submit/auto?user_id=idleberg&amp;url=https://github.com/idleberg/Bootstrap-Listr">Flattr</a> or Bitcoin <code>17CXJuPsmhuTzFV2k4RKYwpEHVjskJktRd</code></p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/idleberg">idleberg</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
     </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
   </body>
 </html>

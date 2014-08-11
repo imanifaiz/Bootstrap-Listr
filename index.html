@@ -33,9 +33,7 @@
 
 <p>A simple PHP script to display folders and files on a server in a well formed list, making use of the <a href="http://getbootstrap.com">Bootstrap 3.2</a> framework.</p>
 
-<p><img src="https://raw.github.com/idleberg/Bootstrap-Listr/gh-pages/images/screenshot-font_awesome.png" alt="Screenshot"><br><em>Screenshot: Example with <a href="#font-awesome">Font Awesome</a> icons enabled</em></p>
-
-<p>For examples using different configurations, have a look at the <a href="http://demo.idleberg.com/Bootstrap-Listr">live demos</a>!</p>
+<p><em>Watch a <a href="http://demo.idleberg.com/Bootstrap-Listr">live demo</a>!</em></p>
 
 <h2>
 <a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
@@ -43,12 +41,12 @@
 <h3>
 <a name="github" class="anchor" href="#github"><span class="octicon octicon-link"></span></a>GitHub</h3>
 
-<p>Clone this repository using <code>git clone https://github.com/idleberg/Bootstrap-Listr</code> or <a href="https://raw.github.com/idleberg/Bootstrap-Listr/master/index.php"><code>download</code></a> the raw file.</p>
+<p>Download the latest <a href="https://github.com/idleberg/Bootstrap-Listr/releases">stable release</a> or clone the repository for the latest bleeding-edge development version.</p>
 
 <h2>
 <a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
 
-<p>I am unaware of a method to use one index file for several directories at once (feel free to correct me!), hence you will have to copy the index in every directory where you would like to use it. Since Bootstrap Listr is a one-file solution, doing so is relatively easy.</p>
+<p>This version of Bootstrap Listr does not support subfolders, hence you will have to copy the index in every directory where you would like to use it. You can test the <a href="https://github.com/idleberg/Bootstrap-Listr/tree/2.0-dev">2.0-dev</a> branch for subfolder support.</p>
 
 <h3>
 <a name="options" class="anchor" href="#options"><span class="octicon octicon-link"></span></a>Options</h3>
@@ -85,7 +83,7 @@
 <h3>
 <a name="viewer" class="anchor" href="#viewer"><span class="octicon octicon-link"></span></a>Viewer</h3>
 
-<p>To view images or videos in a <a href="http://getbootstrap.com/javascript/#modals">Bootstrap Modal</a>, you can enable the viewer in the script header. The required Bootstrap JavaScript library will be added to your page automatically.</p>
+<p>To load images, videos and audio into a <a href="http://getbootstrap.com/javascript/#modals">Bootstrap Modal</a>, you can enable the viewer in the script header. The required Bootstrap JavaScript library will be added to your page automatically.</p>
 
 <h3>
 <a name="libraries--style-sheets" class="anchor" href="#libraries--style-sheets"><span class="octicon octicon-link"></span></a>Libraries &amp; Style-sheets</h3>
@@ -123,6 +121,16 @@
       </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>
-    
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-53539506-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
   </body>
 </html>

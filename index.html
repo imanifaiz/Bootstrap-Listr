@@ -1,95 +1,144 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <title>Bootstrap Listr by idleberg</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <title>Bootstrap Listr by idleberg</title>
   </head>
-
   <body>
-    <div id="container">
-      <div class="inner">
+    <div class="wrapper">
+      <header>
+        <h1>Bootstrap Listr</h1>
+        <p></p>
 
-        <header>
-          <h1>Bootstrap Listr</h1>
-          <h2></h2>
-        </header>
+        <p class="view"><a href="https://github.com/idleberg/Bootstrap-Listr">View the Project on GitHub <small>idleberg/Bootstrap-Listr</small></a></p>
 
-        <section id="downloads" class="clearfix">
-          <a href="https://github.com/idleberg/Bootstrap-Listr/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
-          <a href="https://github.com/idleberg/Bootstrap-Listr/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
-          <a href="https://github.com/idleberg/Bootstrap-Listr" id="view-on-github" class="button"><span>View on GitHub</span></a>
-        </section>
 
-        <hr>
+        <ul>
+          <li><a href="https://github.com/idleberg/Bootstrap-Listr/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/idleberg/Bootstrap-Listr/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/idleberg/Bootstrap-Listr">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a name="bootstrap-listr" class="anchor" href="#bootstrap-listr"><span class="octicon octicon-link"></span></a>Bootstrap Listr</h1>
 
-        <section id="main_content">
-          <p>A simple PHP script to display folders and files on a server in a well formed list, making use of the <a href="http://getbootstrap.com">Bootstrap 3.2</a> framework.</p>
+<p>A replacement for default server indexes, Bootstrap Listr beautifully displays folders and files in the browser. It is built upon the <a href="http://getbootstrap.com">Bootstrap</a> framework and optionally makes use of <a href="http://bootswatch.com/">Bootswatch</a> themes and <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a> icons.</p>
 
-<p><em>Watch a <a href="http://demo.idleberg.com/Bootstrap-Listr">live demo</a>!</em></p>
+<p><em>Watch a <a href="http://demo.idleberg.com/Bootstrap-Listr-2.0-dev/">live demo</a>!</em></p>
 
 <h2>
 <a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
 
-<p>Download the latest <a href="https://github.com/idleberg/Bootstrap-Listr/releases">stable release</a> or clone the repository for the latest development version.</p>
+<ol>
+<li>Clone the repository <code>git clone https://github.com/idleberg/Bootstrap-Listr.git</code> </li>
+<li>Change directory <code>cd Bootstrap-Listr</code>
+</li>
+<li>Install all Node dependencies <code>npm install</code>
+</li>
+</ol><h2>
+<a name="building" class="anchor" href="#building"><span class="octicon octicon-link"></span></a>Building</h2>
 
-<h2>
-<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
-
-<p>Like its <a href="#credtis">predecessors</a>, Bootstrap Listr was meant as <em>one file to rule them all</em>, an easy to deploy single file solution. Since it does not support subfolders, you will have to copy the index in every directory where you would like to use it.</p>
-
-<p>Or, you can have a go at the <a href="https://github.com/idleberg/Bootstrap-Listr/tree/2.0-dev">2.0 developer branch</a>. While it is no longer a single file, it's easy to deploy and features subfolder support among other things. See it in this <a href="http://demo.idleberg.com/Bootstrap-Listr-2.0-dev/">live demo</a>.</p>
+<p>If you're already overwhelmed by the idea of having to build stuff, or simply wonder what happened to the old one-file solution—get the old version <a href="https://github.com/idleberg/Bootstrap-Listr/tree/1.0-dev/">here</a>!</p>
 
 <h3>
-<a name="options" class="anchor" href="#options"><span class="octicon octicon-link"></span></a>Options</h3>
+<a name="local" class="anchor" href="#local"><span class="octicon octicon-link"></span></a>Local</h3>
 
-<p>You can configure a number of settings in the header of the script file:</p>
+<p><a href="http://gulpjs.com/">Gulp</a> tasks are used to configure and build your app. You can install Gulp globally using <code>npm install gulp -g</code>. For your convenience, <code>setup.sh</code> is provided to run all setup tasks. Alternatively, you can run Gulp tasks manually:</p>
+
+<pre><code># create and populate app-folder
+gulp init
+
+# choose default theme (optional)
+gulp bootstrap
+
+# enable the Viewer modal (optional)
+gulp viewer
+
+# enable the Search Box (optional)
+gulp search
+
+# enable Font Awesome icons (optional)
+gulp icons
+
+# enable syntax highlighting (optional)
+gulp highlighter
+
+# minify CSS, uglify JS
+gulp make
+</code></pre>
+
+<p>For a full list of available commands, type <code>gulp help</code>.</p>
+
+<h3>
+<a name="cdn" class="anchor" href="#cdn"><span class="octicon octicon-link"></span></a>CDN</h3>
+
+<p>Instead of running your dependencies locally, you can make use of various content delivery networks (CDN). Initialize your app using <code>gulp init</code> and set <code>dependencies</code> to <code>cdn</code> in your <code>config.json</code>. You can then specify your preferred CDNs (and all other preferences) in this file as well (see <a href="#options">below</a> for details!)</p>
+
+<h2>
+<a name="deployment" class="anchor" href="#deployment"><span class="octicon octicon-link"></span></a>Deployment</h2>
+
+<p>Copy <code>app/</code> to your server, then rename <code>config.json-example</code> to <code>config.json</code> and edit your settings. All files that should be accessible in the browser go into the <code>_public</code> folder (you can change the folder in the config). Depending on your Apache settings, you might have to uncomment the <code>RewriteBase</code> setting in the <code>.htaccess</code> file (maybe add parent folder name after the slash.)</p>
+
+<h2>
+<a name="options" class="anchor" href="#options"><span class="octicon octicon-link"></span></a>Options</h2>
+
+<p>You can configure a number of settings in the file <code>config.json</code>:</p>
 
 <ul>
 <li>Optional columns for size, modified date, permissions</li>
 <li>Document icons</li>
+<li>File viewer for images, videos, audio and source code</li>
+<li>Search box to filter results</li>
 <li>Column sorting</li>
 <li>Responsive tables</li>
 <li>List of ignored files</li>
 <li>Default location for JavaScript libraries and style sheets</li>
+<li>Syntax highlighting in file viewer</li>
+<li>Save to Dropbox</li>
+<li>Share buttons</li>
 <li>Google Analytics</li>
-</ul><h3>
-<a name="naming" class="anchor" href="#naming"><span class="octicon octicon-link"></span></a>Naming</h3>
-
-<p>If you prefer a different file name for the script, you can rename it without worrying about the ignore list. However, depending on your server, you might have declare the renamed file as your directory index.</p>
-
-<ul>
-<li>Apache: <code>DirectoryIndex myIndex.php</code> (see <a href="http://httpd.apache.org/docs/2.2/mod/mod_dir.html">documentation</a>)</li>
-<li>lighttpd: <code>index-file.names = ( "/myIndex.php" )</code> (see <a href="http://redmine.lighttpd.net/projects/1/wiki/Docs_ModDirlisting">documentation</a>)</li>
-<li>nginx: <code>index myIndex.php</code> (see <a href="http://nginx.org/en/docs/http/ngx_http_index_module.html">documentation</a>)</li>
 </ul><h3>
 <a name="font-awesome" class="anchor" href="#font-awesome"><span class="octicon octicon-link"></span></a>Font Awesome</h3>
 
-<p>Rather than using generic icons, you can enable <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a> for beautiful, file-specific icons. Note that this will require extra resources, hence increase the load time.</p>
+<p>Rather than using the default <a href="http://getbootstrap.com/components/#glyphicons">Bootstrap Glyphicons</a>, you can enable <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a> for beautiful, file-specific icons. Note that this will require extra resources, hence increase the load time.</p>
 
 <h3>
 <a name="theming" class="anchor" href="#theming"><span class="octicon octicon-link"></span></a>Theming</h3>
 
-<p>Should you decide to use <a href="http://bootswatch.com/">Bootswatch</a> (or any other) themes, please note that some of these do not include the <a href="http://getbootstrap.com/components/#glyphicons">glyphicons</a> used in the script. You can disable glyphicons in the script header or use Font Awesome icons instead.</p>
+<p>You can overwrite the <code>default</code> Bootstrap with any <a href="http://bootswatch.com/">Bootswatch</a> theme (e.g. <code>united</code>) or add your <code>custom_theme</code> in the CDN settings. Please note that Bootswatch themes do not include <a href="http://getbootstrap.com/components/#glyphicons">glyphicons</a>.</p>
 
 <h3>
 <a name="viewer" class="anchor" href="#viewer"><span class="octicon octicon-link"></span></a>Viewer</h3>
 
-<p>To load images, videos and audio into a <a href="http://getbootstrap.com/javascript/#modals">Bootstrap Modal</a>, you can enable the viewer in the script header. The required Bootstrap JavaScript library will be added to your page automatically.</p>
+<p>To load images, videos, audio and source code into a <a href="http://getbootstrap.com/javascript/#modals">Bootstrap Modal</a>, the viewer is enabled by default. You can change this in <code>config.json</code>. The required Bootstrap JavaScript library will be added to your page automatically.</p>
 
 <h3>
-<a name="libraries--style-sheets" class="anchor" href="#libraries--style-sheets"><span class="octicon octicon-link"></span></a>Libraries &amp; Style-sheets</h3>
+<a name="search-box" class="anchor" href="#search-box"><span class="octicon octicon-link"></span></a>Search Box</h3>
 
-<p>For your convenience, CDNs for Bootstrap and JQuery. Should you have reasons against this, you can change the default locations in the script header.</p>
+<p>To filter files and folders displayed in the table, set <code>enable_search</code> to <code>true</code>. Additionally, you can enable <code>autofocus_search</code> set the focus to the search box on load.</p>
+
+<h3>
+<a name="syntax-highlighter" class="anchor" href="#syntax-highlighter"><span class="octicon octicon-link"></span></a>Syntax Highlighter</h3>
+
+<p>Source code in the viewer modal can be highlighted using <a href="http://highlightjs.org/">highlight.js</a>. Due to performance concerns when applied on huge files, the highlighter will only apply once the button at the bottom of the viewer modal is pressed.</p>
 
 <h2>
+<a name="contribute" class="anchor" href="#contribute"><span class="octicon octicon-link"></span></a>Contribute</h2>
+
+<ol>
+<li>Fork the repository</li>
+<li>Make your changes</li>
+<li>Send a pull request with your changes</li>
+</ol><h2>
 <a name="credits" class="anchor" href="#credits"><span class="octicon octicon-link"></span></a>Credits</h2>
 
 <p>This project is built upon—or includes—code from the following people:</p>
@@ -98,29 +147,38 @@
 <li>Greg Johnson - <a href="http://web.archive.org/web/20130920165711/http://greg-j.com/phpdl/">PHPDL lite</a> [Internet Archive]</li>
 <li>Na Wong - <a href="http://nadesign.net/listr/">Listr</a>
 </li>
-<li>Joe McCullough - <a href="http://joequery.github.io/Stupid-Table-Plugin/">Stupid Table Plugin</a>
-</li>
-</ul><p>Thanks to <a href="https://github.com/melalj">melalj</a> and <a href="https://github.com/Zerquix18">Zerquix18</a> for contributing code to make this project better!</p>
+</ul><p>Contributors:</p>
 
-<h2>
+<ul>
+<li>
+<a href="https://github.com/melalj">@melalj</a> - subfolder support</li>
+<li>
+<a href="https://github.com/Zerquix18">@Zerquix18</a> - security fixes</li>
+</ul><h2>
 <a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
 
-<p>This work by Jan T. Sott is licensed under a <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 Unported License</a></p>
+<p>The MIT License (MIT)</p>
 
-<p><strong>Note:</strong> I am aware that Creative Commons <a href="http://wiki.creativecommons.org/FAQ#Can_I_apply_a_Creative_Commons_license_to_software.3F">advises</a> against using their licenses for software. The choice hasn't been mine and I hope to resolve this issue in the future.</p>
+<p>Copyright (c) 2014 Jan T. Sott</p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
 
 <h2>
 <a name="donate" class="anchor" href="#donate"><span class="octicon octicon-link"></span></a>Donate</h2>
 
 <p>You are welcome support this project using <a href="https://flattr.com/submit/auto?user_id=idleberg&amp;url=https://github.com/idleberg/Bootstrap-Listr">Flattr</a> or Bitcoin <code>17CXJuPsmhuTzFV2k4RKYwpEHVjskJktRd</code></p>
-        </section>
-
-        <footer>
-          Bootstrap Listr is maintained by <a href="https://github.com/idleberg">idleberg</a><br>
-          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
-        </footer>
-
-                  <script type="text/javascript">
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/idleberg">idleberg</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+              <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
           </script>
@@ -131,7 +189,5 @@
             } catch(err) {}
           </script>
 
-      </div>
-    </div>
   </body>
 </html>
